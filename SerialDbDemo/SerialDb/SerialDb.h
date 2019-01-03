@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SerialDb : NSObject
-
++(BOOL)initDbFileWithinDocumentsWithName:(NSString *)dbFileName;
 @end
 
 NS_ASSUME_NONNULL_END
