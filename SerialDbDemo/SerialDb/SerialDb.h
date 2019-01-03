@@ -13,7 +13,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SerialDb : NSObject
-+(BOOL)initDbFileWithinDocumentsWithName:(NSString *)dbFileName;
++(SerialDb *)sharedInstance;
+
+-(void)initDbFileWithinDocumentsWithName:(NSString *)dbFileName;
+-(void)resetDbContent;
 @end
 
 NS_ASSUME_NONNULL_END
