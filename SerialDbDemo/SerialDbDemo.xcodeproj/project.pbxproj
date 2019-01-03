@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		501EC01F7F1BAC16E77E014F /* libPods-SerialDbDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C49A28D52F70E92F07FC3E3 /* libPods-SerialDbDemo.a */; };
 		D89F5F8821DDC26D0090E9D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F5F8721DDC26D0090E9D0 /* AppDelegate.m */; };
 		D89F5F8B21DDC26D0090E9D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F5F8A21DDC26D0090E9D0 /* ViewController.m */; };
 		D89F5F8E21DDC26D0090E9D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89F5F8C21DDC26D0090E9D0 /* Main.storyboard */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52FBD246DEA1D1BC50CD56BF /* Pods-SerialDbDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerialDbDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SerialDbDemo/Pods-SerialDbDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6C49A28D52F70E92F07FC3E3 /* libPods-SerialDbDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SerialDbDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A70858A76CD5BA3B105EECB /* Pods-SerialDbDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerialDbDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SerialDbDemo/Pods-SerialDbDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D89F5F8321DDC26D0090E9D0 /* SerialDbDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerialDbDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89F5F8621DDC26D0090E9D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D89F5F8721DDC26D0090E9D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				501EC01F7F1BAC16E77E014F /* libPods-SerialDbDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02BE9FBE2354D0E4B28E8D80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A70858A76CD5BA3B105EECB /* Pods-SerialDbDemo.debug.xcconfig */,
+				52FBD246DEA1D1BC50CD56BF /* Pods-SerialDbDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B3BBE369DA571B85F64AADE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C49A28D52F70E92F07FC3E3 /* libPods-SerialDbDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D89F5F7A21DDC26D0090E9D0 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +111,8 @@
 				D89F5F9E21DDC2720090E9D0 /* SerialDbDemoTests */,
 				D89F5FA921DDC2720090E9D0 /* SerialDbDemoUITests */,
 				D89F5F8421DDC26D0090E9D0 /* Products */,
+				02BE9FBE2354D0E4B28E8D80 /* Pods */,
+				5B3BBE369DA571B85F64AADE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D89F5FAF21DDC2720090E9D0 /* Build configuration list for PBXNativeTarget "SerialDbDemo" */;
 			buildPhases = (
+				3D638FD22350B4BFA958E20A /* [CP] Check Pods Manifest.lock */,
 				D89F5F7F21DDC26D0090E9D0 /* Sources */,
 				D89F5F8021DDC26D0090E9D0 /* Frameworks */,
 				D89F5F8121DDC26D0090E9D0 /* Resources */,
@@ -269,6 +294,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D638FD22350B4BFA958E20A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SerialDbDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D89F5F7F21DDC26D0090E9D0 /* Sources */ = {
@@ -447,10 +493,12 @@
 		};
 		D89F5FB021DDC2720090E9D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A70858A76CD5BA3B105EECB /* Pods-SerialDbDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SerialDbDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,10 +511,12 @@
 		};
 		D89F5FB121DDC2720090E9D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52FBD246DEA1D1BC50CD56BF /* Pods-SerialDbDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SerialDbDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
