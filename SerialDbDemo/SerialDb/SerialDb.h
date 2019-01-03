@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "FMDatabase.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SerialDb : NSObject
